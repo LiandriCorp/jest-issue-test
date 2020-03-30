@@ -1,3 +1,5 @@
+import "jest";
+
 import HelloWorld from "./HelloWorld";
 
 const hello = new HelloWorld();

@@ -3,3 +3,9 @@ export default class HelloWorld {
         return `Hello ${name}!`;
     }
 }
+
+const map = new Map<string, NodeJS.Timer>();
+
+map.set("1", setTimeout(() => 500));
+
+export {}
