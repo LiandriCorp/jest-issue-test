@@ -1,0 +1,38 @@
+{
+  "name": "typescript-first-steps",
+  "version": "1.0.0",
+  "author": "Alec Furtado",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "watch": "tsc -p . -w",
+    "test": "yarn lint && jest --coverage",
+    "clean": "jest --clearCache",
+    "build": "tsc -p .",
+    "precommit": "yarn test",
+    "prepush": "yarn test && yarn build"
+  },
+  "private": true,
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.4",
+    "@types/node": "13.9.5",
+    "husky": "4.2.3",
+    "jest": "25.2.4",
+    "ts-jest": "25.3.0",
+    "tslint": "6.1.0",
+    "typescript": "3.7.5"
+  }
+}
